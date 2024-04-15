@@ -10,6 +10,12 @@ services:
       - '7000:7000' # TODO: Change this to your project debug port
     volumes:
       - .:/home/node/app
+    deploy:
+      resources:
+        limits:
+          memory: 12288M
+        reservations:
+          memory: 8192M
   
   
   db-template:
